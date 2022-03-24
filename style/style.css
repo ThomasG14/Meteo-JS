@@ -19,14 +19,104 @@ body
 .app-container
 {
 	width: 30%;
-	height: 80%;
 	background-color: #0f0f24;
+	border-radius: 20px;
+}
+
+.app-content
+{
 	display: flex;
 	align-items: center;
 	flex-direction: column;
+	
+}
+
+.back-hills
+{
+	text-align: center;
+	z-index: 1;
+}
+
+.back-hills img
+{
+	max-width: 100%;
+	height: auto;
+
 }
 
 .location
 {
 	font-family: 'Dosis', sans-serif;
+	margin-top: 25px;
+}
+
+.container-temp
+{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+}
+
+.container-icon-temp
+{
+}
+
+.icon-meteo
+{
+	margin-left: -60px;
+	width: 250px;
+	height: auto;
+}
+
+.container-temp-val
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.temperature
+{
+	font-family: 'Dosis', sans-serif;
+	font-size: 48px;
+	text-align: center;
+}
+
+.temp
+{
+	font-family: 'Dosis', sans-serif;
+	font-size: 28px;
+	text-align: center;
+}
+
+.container-info-temp
+{
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+}
+
+
+
+.case-uv
+{
+	background-color: rgba(0, 0, 0, 0.6);
+	width: 20%;
+	text-align: center;
+}
+
+.case-wind
+{
+	background-color: rgba(0, 0, 0, 0.6);
+	width: 20%;
+	text-align: center;
+}
+
+.case-humidty
+{
+	background-color: rgba(0, 0, 0, 0.6);
+	width: 20%;
+	text-align: center;
 }

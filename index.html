@@ -10,44 +10,56 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
 
-	<title>test</title>
+	<title>Free JS Weather APP</title>
 </head>
 <body>
 
 
 	<div class="app-container">
-		<h1 class="location"></h1>
-		<img class="icon-meteo" src="img/jour/01d.svg" alt="Icone du temp">
-			<p class="temp"></p>
-	<p class="temperature"></p>
+		<div class="app-content">
+			<h1 class="location"></h1>
 
-	<p class="humidity"></p>
-	<p class="pressure"></p>
-	<p class="wind"></p>
-	<p class="wind-direction"></p>
-	<p class="uv"></p>
+
+			<div class="container-temp">
+
+				<div class="container-icon-temp">
+					<img class="icon-meteo" src="img/jour/01d.svg" alt="Icone du temp">
+				</div>
+
+				<div class="container-temp-val">
+					<h3 class="temperature"></h3>
+					<h3 class="temp"></h3>
+				</div>
+
+			</div>
+
+			<div class="container-info-temp">
+
+				<div class="case-uv">
+					<img src="img/icon/uv.png">
+					<p class="uv"></p>
+				</div>
+
+				<div class="case-wind">
+					<img src="img/icon/wind.png">
+					<p class="wind"></p>
+					<p class="wind-direction"></p>
+				</div>
+
+				<div class="case-humidty">
+					<img src="img/icon/water.png">
+					<p class="humidity"></p>
+				</div>
+				
+			</div>
+			
+		</div>
+
+
+		<div class="back-hills">
+			<img class="hills" src="">
+		</div>
 	</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-
-	
-
 
 
 	<script type="module" src="js/main.js"></script>

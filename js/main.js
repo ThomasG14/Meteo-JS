@@ -18,6 +18,7 @@ const humidity = document.querySelector('.humidity');
 //Indice UV
 const iuv = document.querySelector('.uv');
 
+const hills = document.querySelector('.hills');
 
 if(navigator.geolocation)
 {
@@ -58,11 +59,13 @@ function CallAPIWeather(long, lat)
         {
             imgIcon.src = `img/jour/${API_WEATHER.current.weather[0].icon}.svg`
             background.style.backgroundColor='#5094ab';
+            hills.src = `img/bg-day.png`
         }
         else
         {
             imgIcon.src = `img/nuit/${API_WEATHER.current.weather[0].icon}.svg`
             background.style.backgroundColor='#0f0f24';
+            hills.src = 'img/bg-night.png'
         }
 
         //Le temp
@@ -108,7 +111,7 @@ function CallAPICity(longi, lati)
     })
     .then((results) => 
     {        
-        //console.log(results)
+        console.log(results)
         API_CITY = results
         location.innerText = API_CITY[0].nom;      
     })
