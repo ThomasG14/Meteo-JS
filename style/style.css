@@ -102,6 +102,8 @@ body
 
 .case-uv
 {
+	padding: 10px;
+	border-radius: 15px;
 	background-color: rgba(0, 0, 0, 0.6);
 	width: 20%;
 	text-align: center;
@@ -109,6 +111,8 @@ body
 
 .case-wind
 {
+	padding: 10px;
+	border-radius: 15px;
 	background-color: rgba(0, 0, 0, 0.6);
 	width: 20%;
 	text-align: center;
@@ -116,6 +120,8 @@ body
 
 .case-humidty
 {
+	padding: 10px;
+	border-radius: 15px;
 	background-color: rgba(0, 0, 0, 0.6);
 	width: 20%;
 	text-align: center;

@@ -17,6 +17,9 @@ const temperature = document.querySelector('.temperature');
 const humidity = document.querySelector('.humidity');
 //Indice UV
 const iuv = document.querySelector('.uv');
+//vent
+const wind = document.querySelector('.wind')
+const wind_Direction = document.querySelector('.wind-direction')
 
 const hills = document.querySelector('.hills');
 
@@ -52,6 +55,7 @@ function CallAPIWeather(long, lat)
         let heureNow = new Date().getHours()
         let MinuteNow = new Date().getMinutes();
         let uv = API_WEATHER.current.uvi;
+        let windDirection = API_WEATHER.current.wind_deg;
 
 
         //Icone du temp dynamique
@@ -69,34 +73,44 @@ function CallAPIWeather(long, lat)
         }
 
         //Le temp
-        temps.innerText = API_WEATHER.current.weather[0].description;
+        temps.innerHTML = API_WEATHER.current.weather[0].description;
         //La température
-        temperature.innerText = `${Math.trunc(API_WEATHER.current.temp)}°`;
+        temperature.innerHTML = `${Math.trunc(API_WEATHER.current.temp)}°`;
         //L'humiditer
-        humidity.innerHTML = `${Math.trunc(API_WEATHER.current.humidity)}%`
-
+        humidity.innerHTML = `${Math.trunc(API_WEATHER.current.humidity)} %`;
+        //Vent
+        wind.innerHTML = `${Math.trunc(API_WEATHER.current.wind_speed* 3.6) } Km/h`;
 
         //echelle d'indice uv
         if(uv <= 2)
         {
-            iuv.innerText = `faible`;
+            iuv.innerHTML = `faible`;
         }
         else if(uv > 2 && uv <= 5)
         {
-            iuv.innerText = `moyen`;
+            iuv.innerHTML = `moyen`;
         }
         else if(uv > 5 && uv <= 7)
         {
-            iuv.innerText = `élevé`;
+            iuv.innerHTML = `élevé`;
         }
         else if(uv > 7 && uv <= 10)
         {
-            iuv.innerText = `Très élevé`;
+            iuv.innerHTML = `Très élevé`;
         }
         else
         {
-            iuv.innerText = `extrème`;
+            iuv.innerHTML = `extrème`;
         }
+
+
+        //direction du vent
+        if(windDirection === 0)
+        {
+            wind_Direction.innerHTML = `Nord`;
+        }
+
+
 
     })
 }
