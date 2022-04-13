@@ -5,6 +5,8 @@ let API_CITY;
 
 //Arrière plan de l'app
 const background = document.querySelector('.app-container');
+//Png montagne
+const hills = document.querySelector('.hills');
 //Localisation
 const location = document.querySelector('.location');
 //Icone svg du temp
@@ -21,8 +23,6 @@ const iuv = document.querySelector('.uv');
 const wind = document.querySelector('.wind')
 const wind_Direction = document.querySelector('.wind-direction')
 
-const hills = document.querySelector('.hills');
-
 if(navigator.geolocation)
 {
     navigator.geolocation.getCurrentPosition(position => 
@@ -31,8 +31,7 @@ if(navigator.geolocation)
         let lat = position.coords.latitude;
         CallAPIWeather(long, lat);
         CallAPICity(long, lat);
-    }, 
-    () => 
+    },() => 
     {
         alert(`Activez la localisation pour faire fonctionner l'appli`)
     })
@@ -125,7 +124,8 @@ function CallAPICity(longi, lati)
     })
     .then((results) => 
     {        
-        console.log(results)
+        //console.log(results)
+        
         API_CITY = results
         location.innerText = API_CITY[0].nom;      
     })
