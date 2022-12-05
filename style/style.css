@@ -8,11 +8,12 @@
 body
 {
 	height: 100vh;
-	background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(65,161,181,1) 100%);
+	background: rgb(65, 65, 65);
 	color: white;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	font-family:'Trebuchet MS', sans-serif
 }
 
 
@@ -46,7 +47,6 @@ body
 
 .location
 {
-	font-family: 'Dosis', sans-serif;
 	margin-top: 25px;
 }
 
@@ -56,10 +56,6 @@ body
 	display: flex;
 	justify-content: center;
 	flex-direction: row;
-}
-
-.container-icon-temp
-{
 }
 
 .icon-meteo
@@ -79,14 +75,13 @@ body
 
 .temperature
 {
-	font-family: 'Dosis', sans-serif;
 	font-size: 48px;
 	text-align: center;
 }
 
 .temp
 {
-	font-family: 'Dosis', sans-serif;
+	
 	font-size: 28px;
 	text-align: center;
 }
